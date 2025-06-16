@@ -164,9 +164,18 @@ body { font-family: Arial, sans-serif; line-height:1.6; color:#333; }
   </section>
 
   <script>
-    const btn = document.getElementById('currencyBtn');
-    const menu = document.getElementById('currencyMenu');
-    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+let dates = ["2022-04-01", "2023-01-15", "2021-07-20"];
+
+dates.forEach(date => {
+  let year = date.split("-")[0];
+  console.log(year);
+});
+function printUppercaseWords(words) {
+  words.forEach(function(word) {
+    console.log(word.toUpperCase());
+  });
+}
+
   </script>
 </body>
 </html>
