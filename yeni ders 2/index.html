@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>COOK – Master Cooking Worldwide</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<style>
+    * { margin:0; padding:0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; line-height:1.6; color:#333; }
+.container { max-width: 1200px; margin:0 auto; padding: 0 20px; }
+
+/* Header */
+.header { background: #fff; padding:20px 0; box-shadow:0 2px 4px rgba(0,0,0,0.1); }
+.header .logo { font-size:1.5rem; font-weight:bold; display:inline-block; }
+.nav { display:inline-block; margin-left:30px; }
+.nav a { margin:0 15px; color:#333; text-decoration:none; }
+.actions { float:right; }
+.btn { background:#f4f4f4; border:none; padding:10px 15px; margin-left:10px; cursor:pointer; }
+.btn.primary { background:#e67e22; color:white; }
+.currency-selector { display:inline-block; position:relative; }
+.currency-selector button { background:none; border:none; cursor:pointer; font-size:1rem; }
+.currency-menu {
+  position:absolute; top:100%; right:0; background:white; border:1px solid #ccc; list-style:none;
+}
+.currency-menu li {
+  padding:8px 12px; cursor:pointer;
+}
+.currency-menu li:hover { background:#f4f4f4; }
+.hidden { display:none; }
+
+/* Hero */
+.hero { background:#fafafa; padding:60px 0; }
+.hero-content { display:flex; align-items:center; justify-content:space-between; }
+.hero-text { max-width: 600px; }
+.hero-text h1 { font-size:2.5rem; margin-bottom:20px; }
+.highlight { color:#e67e22; }
+.hero-text p { margin-bottom:20px; font-size:1.1rem; }
+.hero-buttons .btn { margin-right:15px; }
+.hero-buttons .btn.primary { padding:12px 20px; }
+.stats { display:flex; margin-top:30px; list-style:none; }
+.stats li { margin-right:30px; font-size:0.9rem; }
+
+/* Explore */
+.explore h2 { font-size:2rem; margin:40px 0 20px; }
+.categories-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:20px; }
+.category-card {
+  background:#fff; padding:20px; border:1px solid #ddd; border-radius:8px;
+  text-align:center; font-weight:bold; cursor:pointer;
+}
+.category-card.more { text-align:right; color:#e67e22; }
+
+/* Benefits */
+.benefits h2 { font-size:2rem; margin:40px 0; text-align:center; }
+.benefits-grid {
+  display:flex; justify-content:space-between; gap:20px; margin-bottom:40px;
+}
+.benefit-card {
+  background:#fff; padding:20px; border:1px solid #ddd; border-radius:8px; flex:1; text-align:center;
+}
+.benefit-card img { margin-bottom:10px; }
+.advantages {
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;
+}
+.advantage-card { background:#f9f9f9; padding:20px; border-radius:8px; }
+
+</style>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">COOK</div>
+      <nav class="nav">
+        <a href="#">Cooking Classes</a>
+        <a href="#">Become a Chef</a>
+        <a href="#">Group Cooking</a>
+      </nav>
+      <div class="actions">
+        <button class="btn">Login</button>
+        <button class="btn primary">Sign Up</button>
+        <div class="currency-selector">
+          <button id="currencyBtn">USD ▼</button>
+          <ul id="currencyMenu" class="currency-menu hidden">
+            <li>USD</li>
+            <li>EUR</li>
+            <li>UAH</li>
+            <li>GBP</li>
+            <li>CHF</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Master the Art of Cooking with <span class="highlight">Experts</span> Worldwide</h1>
+        <p>Experience the joy of cooking in a whole new way with our engaging online cooking classes...</p>
+        <div class="hero-buttons">
+          <button class="btn primary">Find Your Tutor</button>
+          <button class="btn">Join Our Chefs</button>
+        </div>
+        <ul class="stats">
+          <li><strong>100+</strong> Talented Chefs</li>
+          <li><strong>1000+</strong> Students</li>
+          <li><strong>4.8 ★</strong> Rating</li>
+          <li><strong>20+</strong> Cooking Categories</li>
+        </ul>
+      </div>
+      <div class="hero-image">
+        <!-- Örnek yer tutucu resim; kendi resminizi kullanın -->
+        <img src="https://via.placeholder.com/400x300" alt="Cooking class"/>
+      </div>
+    </div>
+  </section>
+
+  <section class="explore container">
+    <h2>Explore & Learn</h2>
+    <div class="categories-grid">
+      <div class="category-card">Bakery</div>
+      <div class="category-card">Vegan Cooking</div>
+      <div class="category-card">Seafood Mastery</div>
+      <div class="category-card">BBQ & Grilling</div>
+      <div class="category-card">Wine Pairing</div>
+      <div class="category-card">Cake Decorating</div>
+      <div class="category-card more">Show more →</div>
+    </div>
+  </section>
+
+  <section class="benefits container">
+    <h2>Our Unique Benefits</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <img src="https://via.placeholder.com/60" alt="" />
+        <h3>Expert Chefs</h3>
+        <p>Learn from the best... professional chefs from around the world.</p>
+      </div>
+      <div class="benefit-card">
+        <img src="https://via.placeholder.com/60" alt="" />
+        <h3>Save Time and Money</h3>
+        <p>Enjoy the convenience of learning from home... reduce dining-out expenses.</p>
+      </div>
+      <div class="benefit-card">
+        <img src="https://via.placeholder.com/60" alt="" />
+        <h3>Accessible Cooking</h3>
+        <p>Start your culinary journey with ease... user-friendly platform.</p>
+      </div>
+    </div>
+    <div class="advantages">
+      <div class="advantage-card">
+        <h4>Diverse Range of Classes</h4>
+        <p>Explore the culinary world with a vast array of online cooking classes...</p>
+      </div>
+      <div class="advantage-card">
+        <h4>Opportunity to Teach</h4>
+        <p>If you're an experienced cook... share your courses, reach global audience, and earn income.</p>
+      </div>
+      <div class="advantage-card">
+        <h4>Interactive Lessons</h4>
+        <p>Engage in real-time with expert chefs... receive instant feedback.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const btn = document.getElementById('currencyBtn');
+    const menu = document.getElementById('currencyMenu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
